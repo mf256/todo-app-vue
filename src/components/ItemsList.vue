@@ -1,7 +1,7 @@
 <template>
-  <table className="table table-striped">
+  <table class="table table-striped">
     <tbody>
-      <ItemRow index="0" name="Test" done="false" />
+      <ItemRow v-for="(item, i) in items" :key="i" :index="i" :item="item" />
     </tbody>
   </table>
 </template>
@@ -13,6 +13,9 @@ export default {
   name: "ItemsList",
   components: {
     ItemRow,
+  },
+  props: {
+    items: Array,
   },
 };
 </script>
