@@ -10,6 +10,7 @@
 </template>
 
 <script>
+import { MOCK_ITEMS } from "@/mockData";
 import AddItem from "./AddItem.vue";
 import ItemsList from "./ItemsList.vue";
 
@@ -21,7 +22,7 @@ export default {
   },
   data() {
     return {
-      items: ["aaa", "bbbb"],
+      items: [...MOCK_ITEMS],
     };
   },
   methods: {
