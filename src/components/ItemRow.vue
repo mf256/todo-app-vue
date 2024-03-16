@@ -6,6 +6,7 @@
         class="form-check-input"
         type="checkbox"
         :id="`checkboxitem-${index}`"
+        @click="$emit('toggle-item', index)"
       />
     </td>
     <td>
@@ -17,7 +18,13 @@
       </label>
     </td>
     <td class="text-end">
-      <button class="btn btn-danger button-delete" type="button">X</button>
+      <button
+        class="btn btn-danger button-delete"
+        type="button"
+        @click="$emit('delete-item', index)"
+      >
+        X
+      </button>
     </td>
   </tr>
 </template>

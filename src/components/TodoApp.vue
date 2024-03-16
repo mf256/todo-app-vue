@@ -3,7 +3,11 @@
     <div class="row justify-content-md-center">
       <div class="col col-lg-4">
         <AddItem @add-item="addItem" />
-        <ItemsList :items="items" />
+        <ItemsList
+          :items="items"
+          @delete-item="deleteItem"
+          @toggle-item="toggleItem"
+        />
       </div>
     </div>
   </div>
@@ -28,7 +32,16 @@ export default {
   methods: {
     addItem(item) {
       this.items = [...this.items, item];
-      console.log("xxxx", this.items, item);
+    },
+    deleteItem(index) {
+      this.items = [...items.filter((v, i) => i !== index)];
+    },
+    toggleItem(index) {
+      this.items = [
+        ...items.map((v, i) =>
+          i === index ? { ...v, isCompleted: !v.isCompleted } : v
+        ),
+      ];
     },
   },
 };
