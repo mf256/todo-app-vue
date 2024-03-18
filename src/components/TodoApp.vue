@@ -31,17 +31,13 @@ export default {
   },
   methods: {
     addItem(item) {
-      this.items = [...this.items, item];
+      this.items.push(item);
     },
     deleteItem(index) {
-      this.items = [...this.items.filter((v, i) => i !== index)];
+      this.items.splice(index, 1);
     },
     toggleItem(index) {
-      this.items = [
-        ...this.items.map((v, i) =>
-          i === index ? { ...v, isCompleted: !v.isCompleted } : v
-        ),
-      ];
+      this.items[index].isCompleted = !this.items[index].isCompleted;
     },
   },
 };

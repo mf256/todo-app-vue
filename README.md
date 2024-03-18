@@ -16,14 +16,15 @@ Live demo: https://mf256.github.io/todo-app-vue
 
 ## General info
 
-Goal of project is to create simple Todo List application using Vue framework.
+Goal of project is to create simple Todo List application using Vue framework and Options API.
 
 ## Technologies
 
-- [Vue](https://vuejs.org/)
-- [Bootstrap](https://getbootstrap.com/)
-- [Bootswatch](https://bootswatch.com/)
+- [Vue](https://vuejs.org)
+- [Bootstrap](https://getbootstrap.com)
+- [Bootswatch](https://bootswatch.com)
 - [Prettier](https://prettier.io)
+- [ESLint](https://eslint.org)
 
 ## Features
 
@@ -33,7 +34,7 @@ Goal of project is to create simple Todo List application using Vue framework.
 
 ## Screenshots
 
-
+![Example screenshot 1](./doc/screen1.png)
 
 ## Setup
 
@@ -59,7 +60,7 @@ for more commands refer `package.json`
 
 ## Status
 
-Project is in progress.
+Project is finished.
 
 ## License
 
