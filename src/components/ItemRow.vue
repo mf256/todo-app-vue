@@ -12,7 +12,7 @@
     <td>
       <label
         :htmlFor="`checkboxitem-${index}`"
-        :class="[item?.isComplete ? 'done' : '']"
+        :class="[item?.isCompleted ? 'done' : '']"
       >
         {{ item.name }}
       </label>

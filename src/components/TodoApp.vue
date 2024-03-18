@@ -34,11 +34,11 @@ export default {
       this.items = [...this.items, item];
     },
     deleteItem(index) {
-      this.items = [...items.filter((v, i) => i !== index)];
+      this.items = [...this.items.filter((v, i) => i !== index)];
     },
     toggleItem(index) {
       this.items = [
-        ...items.map((v, i) =>
+        ...this.items.map((v, i) =>
           i === index ? { ...v, isCompleted: !v.isCompleted } : v
         ),
       ];
